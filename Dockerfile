@@ -1,4 +1,4 @@
-FROM nginx:1.24.0
+FROM nginx:latest
 
 LABEL org.label-schema.schema-version="1.24.0"
 
