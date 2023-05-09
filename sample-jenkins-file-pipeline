@@ -4,28 +4,28 @@ pipeline {
         stage('Build version 1.24.0') {
             environment {
                 DOCKER_IMAGE = 'my-docker-image:v1.24.0'
-                DOCKERFILE_PATH = '/home/ubuntu'
+                DOCKERFILE_PATH = '/var/lib/jenkins/sample'
             }
             steps {
-                sh 'sudo docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
+                sh 'docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
             }
         }
         stage('Build version 1.23.4') {
             environment {
                 DOCKER_IMAGE = 'my-docker-image:v1.23.4'
-                DOCKERFILE_PATH = '/home/ubuntu'
+                DOCKERFILE_PATH = '/var/lib/jenkins/sample'
             }
             steps {
-                sh 'sudo docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
+                sh 'docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
             }
         }
         stage('Build version 1.23') {
             environment {
                 DOCKER_IMAGE = 'my-docker-image:v1.23'
-                DOCKERFILE_PATH = '/home/ubuntu'
+                DOCKERFILE_PATH = '/var/lib/jenkins/sample'
             }
             steps {
-                sh 'sudo docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
+                sh 'docker build -t $DOCKER_IMAGE -f $DOCKERFILE_PATH .'
             }
         }
     }
